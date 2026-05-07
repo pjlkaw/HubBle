@@ -4,9 +4,9 @@ const path = require("path")
 const app = express()
 
 //Permite acessar CSS, JS, Imagens, ícones
-app.use(express.static(path.join(__dirname, "..public")))
+app.use(express.static(path.join(__dirname, "../public")))
 
-app.get('/', (req, res) => {
+app.get('/main', (req, res) => {
   res.sendFile(path.join(__dirname, "../public/index.html"))
 })
 

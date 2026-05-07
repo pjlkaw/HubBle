@@ -13,26 +13,40 @@
     --primary-color: rgb(19, 19, 19);
     --secundary-color: rgb(255, 255, 255);
     --button-color: rgb(49, 49, 49);
+    --background-color: rgb(104, 95, 107);
+    --pomodoro-red-color: rgb(255, 125, 125);
+    --notes-yellow-color: rgb(255, 235, 125);
+    --conversor-purple-color: rgb(251, 125, 255);
+    --password-green-color: rgb(162, 255, 125);
+}
+
+body {
+    background-color: var(--background-color);
 }
 
 /* HEADER ========================= */
 
-header {
+header .headerContainer {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
     padding: 15px;
     background-color: var(--primary-color);
     color: var(--secundary-color);
 }
 
-header a {
+header .headerContainer h1 i {
+    color: var(--background-color);
+}
+
+header .headerContainer a {
     text-decoration: none;
-    color: var(--secundary-color);
     background-color: var(--button-color);
     padding: 5px 15px;
     border-radius: 15px;
     font-size: 15px;
+    color: var(--secundary-color);
 }
 
 /* MAIN ========================= */
@@ -47,9 +61,17 @@ main .containetTool {
     gap: 10px;
 }
 
+.toolHref {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .divTool {
     width: 80%;
     border: solid;
+    border-radius: 5px;
 }
 
 .divTool img {
@@ -61,12 +83,27 @@ main .containetTool {
     color: var(--secundary-color);
 }
 
-.nameTool a {
+.nameTool span {
     text-decoration: none;
     color: var(--secundary-color);
     padding: 0px 30px;
     width: 100%;
 }
+
+/* Tools individuais */
+.pomodoroDiv {
+    background-color: var(--pomodoro-red-color);
+}
+.notesDiv {
+    background-color: var(--notes-yellow-color);
+}
+.conversorDiv {
+    background-color: var(--conversor-purple-color);
+}
+.passwordDiv {
+    background-color: var(--password-green-color);
+}
+
 
 /* FOOTER ========================= */
 

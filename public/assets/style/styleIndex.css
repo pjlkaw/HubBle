@@ -21,7 +21,10 @@
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     background-color: var(--background-color);
+    min-height: 100vh;
 }
 
 /* HEADER ========================= */
@@ -50,6 +53,10 @@ header .headerContainer a {
 }
 
 /* MAIN ========================= */
+
+main {
+    flex: 1;
+}
 
 /* BOX TOOLS */
 
@@ -118,6 +125,4 @@ footer {
     font-size: 10px;
     background-color: var(--primary-color);
     color: var(--secundary-color);
-    position: fixed;
-    bottom: 0px;
 }

@@ -1,3 +1,112 @@
+/* GERAL ========================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
-    
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --primary-color: rgb(19, 19, 19);
+    --secundary-color: rgb(255, 255, 255);
+    --button-color: rgb(49, 49, 49);
+    --background-color: rgb(104, 95, 107);
+    --pomodoro-red-color: rgb(255, 125, 125);
+    --notes-yellow-color: rgb(255, 235, 125);
+    --conversor-purple-color: rgb(251, 125, 255);
+    --password-green-color: rgb(162, 255, 125);
+    --tertiary-color: hsl(0, 100%, 90%);
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-color);
+}
+
+/* HEADER ========================= */
+
+header .headerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: var(--primary-color);
+    color: var(--secundary-color);
+    padding: 0px 15px;
+}
+
+header .headerContainer h1 i {
+    color: var(--background-color);
+}
+
+header .headerContainer a {
+    text-decoration: none;
+    background-color: var(--button-color);
+    padding: 5px 15px;
+    border-radius: 15px;
+    font-size: 15px;
+    color: var(--secundary-color);
+}
+
+
+/* MAIN ========================= */
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.timerContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    justify-content: center;
+    background-color: var(--tertiary-color);
+    padding: 30px;
+    border-radius: 50px;
+}
+
+.timerDiv {
+    padding: 70px;
+    border-radius: 70%;
+    border: solid 5px var(--button-color);
+}
+
+.timerDiv span {
+    font-size: 50px;
+}
+
+button {
+    border: none;
+    text-decoration: none;
+    background-color: var(--button-color);
+    padding: 5px 15px;
+    border-radius: 15px;
+    font-size: 15px;
+    color: var(--secundary-color);
+}
+
+
+/* FOOTER ========================= */
+
+footer {
+    background-color: var(--preto);
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    width: 100%;
+    gap: 10px;
+    padding: 10px;
+    font-size: 10px;
+    background-color: var(--primary-color);
+    color: var(--secundary-color);
+    position: fixed;
+    bottom: 0px;
 }

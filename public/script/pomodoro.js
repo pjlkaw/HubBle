@@ -1,4 +1,4 @@
-import { themeFunction } from '../script/index.js'
+import { themeFunction } from '../functions/themeFunction.js'
 
-themeFunction() 
+themeFunction(true) 
 

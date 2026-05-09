@@ -13,7 +13,7 @@
     --primary-color: rgb(19, 19, 19);
     --secundary-color: rgb(255, 255, 255);
     --button-color: rgb(49, 49, 49);
-    --background-color: rgb(104, 95, 107);
+    --background-color: rgb(240, 240, 240);
     --pomodoro-red-color: rgb(255, 125, 125);
     --notes-yellow-color: rgb(255, 235, 125);
     --conversor-purple-color: rgb(251, 125, 255);
@@ -25,6 +25,21 @@ body {
     flex-direction: column;
     background-color: var(--background-color);
     min-height: 100vh;
+}
+
+/* button top */
+.btnTop {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+}
+.btnTop button {
+    padding: 5px;
+    text-align: center;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--secundary-color);
 }
 
 /* HEADER ========================= */

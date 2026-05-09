@@ -12,19 +12,20 @@
     --primary-color: rgb(19, 19, 19);
     --secundary-color: rgb(255, 255, 255);
     --button-color: rgb(49, 49, 49);
-    --background-color: rgb(104, 95, 107);
+    --background-color: rgb(240, 240, 240);
+
     --pomodoro-red-color: rgb(255, 125, 125);
-    --notes-yellow-color: rgb(255, 235, 125);
-    --conversor-purple-color: rgb(251, 125, 255);
-    --password-green-color: rgb(162, 255, 125);
-    --tertiary-color: hsl(0, 100%, 90%);
+    --tertiary-color: #ffe5e5;
+
+    --text-color-black: rgb(19, 19, 19);
+    --text-color-white: rgb(255, 255, 255);
+
 }
 
 body {
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background-color: var(--background-color);
+    height: 100vh;
 }
 
 /* HEADER ========================= */
@@ -35,8 +36,11 @@ header .headerContainer {
     justify-content: space-between;
     width: 100%;
     background-color: var(--primary-color);
-    color: var(--secundary-color);
     padding: 0px 15px;
+}
+
+header .headerContainer h1 {
+    color: white;
 }
 
 header .headerContainer h1 i {
@@ -49,17 +53,33 @@ header .headerContainer a {
     padding: 5px 15px;
     border-radius: 15px;
     font-size: 15px;
-    color: var(--secundary-color);
+    color: var(--text-color-white);
 }
 
+.divTheme {
+    background-color: var(--secundary-color);
+    color: var(--text-color-black);
+    border-radius: 30px;
+    padding: 0px 5px;
+}
 
 /* MAIN ========================= */
 
 main {
-    flex: 1;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    justify-content: center;
+    height: 100vh;
+    transition: all 500ms ease-in-out;
+    background-color: var(--tertiary-color);
+}
+
+main .arc {
+    font-size: 30px;
+    color: var(--pomodoro-red-color);
+    margin-bottom: 20px;
 }
 
 .timerContainer {
@@ -68,20 +88,26 @@ main {
     align-items: center;
     gap: 60px;
     justify-content: center;
+    box-shadow: 0px 5px 10px var(--primary-color);
     background-color: var(--tertiary-color);
+    transition: all 500ms ease-in-out;
     padding: 30px;
     border-radius: 50px;
+    transition: all 500ms ease-in-out;
+    max-width: 80%;
 }
 
 .timerDiv {
-    padding: 70px;
-    border-radius: 70%;
-    border: solid 5px var(--button-color);
+    margin: 30px;
 }
 
 .timerDiv span {
+    border: solid 3px var(--pomodoro-red-color);
+    color: var(--pomodoro-red-color);
+    font-weight: bold;
     font-size: 50px;
-    background-color: var(--tertiary-color);
+    padding: 20px;
+    border-radius: 50%;
 }
 
 button {
@@ -91,7 +117,7 @@ button {
     padding: 5px 15px;
     border-radius: 15px;
     font-size: 15px;
-    color: var(--secundary-color);
+    color: var(--text-color-white);
 }
 
 

@@ -13,6 +13,12 @@
             <a href="/">
                 <i class="fa-regular fa-house"></i>
             </a>
+
+            <div class="divTheme">
+                <i id="whiteTheme" class="fa-solid fa-moon" style="opacity: 0; transition: all 500ms ease-in-out;"></i>
+                <i id="darkTheme" class="fa-regular fa-moon" style="opacity: 1; transition: all 500ms ease-in-out;"></i>
+            </div>
+
             <h1>
                 <i class="fa-solid fa-meteor"></i>
                 HubBle
@@ -22,24 +28,33 @@
 
     <main>
 
-        <section class="timerContainer">
+        <div class="arc">
+            <span>P</span>
+            <span>O</span>
+            <span>M</span>
+            <span>O</span>
+            <span>D</span>
+            <span>O</span>
+            <span>R</span>
+            <span>O</span>
+        </div>
+
+        <section id="timerContainer" class="timerContainer">
 
             <div class="modes">
-                <button>Short</button>
-                <button>Pause</button>
-                <button>Long</button>
+                <button id="shortID">Short</button>
+                <button id="breakID">Break</button>
+                <button id="longID">Long</button>
             </div>
 
             <div class="timerDiv">
-                <div class="timerCicle">
-                    <span>04:00</span>
-                </div>
+                <span id="timerID">00:00:00</span>
             </div>
 
             <div class="buttonsTimer">
-                <button>Start</button>
-                <button>Pause</button>
-                <button>Set</button>
+                <button id="startID">Start <i class="fa-solid fa-circle-play"></i></button>
+                <button id="pauseID">Pause <i class="fa-solid fa-circle-pause"></i></button>
+                <button id="setID">Set <i class="fa-solid fa-stopwatch"></i></button>
             </div>
 
         </section>
@@ -52,5 +67,7 @@
         <p>Todos os direitos reservados©</p>
     </footer>
 
+
+    <script type="module" src="../script/pomodoro.js"></script>
 </body>
 </html>

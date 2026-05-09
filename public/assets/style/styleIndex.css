@@ -25,6 +25,7 @@ body {
     flex-direction: column;
     background-color: var(--background-color);
     min-height: 100vh;
+    transition: all 500ms ease-in-out;
 }
 
 /* button top */
@@ -40,6 +41,7 @@ body {
     border: none;
     background-color: var(--primary-color);
     color: var(--secundary-color);
+    box-shadow: 0px 0px 50px 0px var(--background-color);
 }
 
 /* HEADER ========================= */
@@ -55,6 +57,7 @@ header .headerContainer {
 }
 
 header .headerContainer h1 i {
+    transition: all 500ms ease-in-out;
     color: var(--background-color);
 }
 
@@ -65,6 +68,13 @@ header .headerContainer a {
     border-radius: 15px;
     font-size: 15px;
     color: var(--secundary-color);
+}
+
+.divTheme {
+    background-color: var(--secundary-color);
+    color: var(--primary-color);
+    border-radius: 30px;
+    padding: 0px 5px;
 }
 
 /* MAIN ========================= */

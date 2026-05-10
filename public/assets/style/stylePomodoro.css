@@ -90,15 +90,10 @@ main .arc {
     justify-content: center;
     box-shadow: 0px 5px 10px var(--primary-color);
     background-color: var(--tertiary-color);
-    transition: all 500ms ease-in-out;
     padding: 30px;
     border-radius: 50px;
     transition: all 500ms ease-in-out;
     max-width: 80%;
-}
-
-.timerDiv {
-    margin: 30px;
 }
 
 .timerDiv span {
@@ -114,10 +109,30 @@ button {
     border: none;
     text-decoration: none;
     background-color: var(--button-color);
-    padding: 5px 15px;
+    font-weight: bold;
+    padding: 10px 15px;
     border-radius: 15px;
     font-size: 15px;
     color: var(--text-color-white);
+}
+
+.buttonsTimer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.buttonsTimer button {
+    padding: 10px 40px;
+}
+
+#setInput {
+    width: 100px;
+    align-items: center;
+    text-align: center;
+    border-radius: 20px;
+    padding: 10px;
+    border: none;
 }
 
 

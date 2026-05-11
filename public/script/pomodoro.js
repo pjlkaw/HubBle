@@ -27,10 +27,10 @@ longButton.addEventListener('click', () => {
 })
 
 startButton.addEventListener('click', () => {
+    startButton.disabled = true;
     if (timer > 0) {
         interval = setInterval((t) => {
             timer--
-            
     
             let hours = String(Math.floor(timer/3600)).padStart(2, '0')
             let minutes = String(Math.floor((timer % 3600) / 60)).padStart(2, '0')
@@ -39,16 +39,41 @@ startButton.addEventListener('click', () => {
             console.log(hours, minutes, seconds);
             
             timerDisplay.innerHTML = `${hours}:${minutes}:${seconds}`
+
+            if (timer <= 0) {
+                clearInterval(interval);
+                startButton.disabled = false;
+            }
+
         }, 1000)
     }
 })
 
 pauseButton.addEventListener('click', ()=>{
+    startButton.disabled = false;
     clearInterval(interval)
 })
 
+let setButtonAtivo = false
 setButton.addEventListener('click', ()=>{
-    const setInput = document.getElementById('setInput')
-    setInput.style.display = "flex"
+
+    setButtonAtivo = !setButtonAtivo
+
+    if (setButtonAtivo === true) {
+        const setInput = document.getElementById('setInput')
+        const setInputValue = setInput.value
+        setInput.style.display = "flex"
+        setInput.style.opacity = "1"
+
+
+
+
+
+    }
+    else {
+        const setInput = document.getElementById('setInput')
+        const setInputValue = setInput.value
+        setInput.style.display = "none"
+    }
 
 })

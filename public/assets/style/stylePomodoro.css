@@ -105,7 +105,7 @@ main .arc {
     border-radius: 50%;
 }
 
-button {
+button, input {
     border: none;
     text-decoration: none;
     background-color: var(--button-color);
@@ -114,6 +114,7 @@ button {
     border-radius: 15px;
     font-size: 15px;
     color: var(--text-color-white);
+    transition: all 1000ms ease-in-out;
 }
 
 .buttonsTimer {

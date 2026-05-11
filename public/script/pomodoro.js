@@ -47,6 +47,13 @@ startButton.addEventListener('click', () => {
 
         }, 1000)
     }
+
+    if (setButtonAtivo) {
+        const setInput = document.getElementById('setInput')
+
+    }
+
+
 })
 
 pauseButton.addEventListener('click', ()=>{
@@ -59,13 +66,20 @@ setButton.addEventListener('click', ()=>{
 
     setButtonAtivo = !setButtonAtivo
 
-    if (setButtonAtivo === true) {
-        const setInput = document.getElementById('setInput')
+    if (setButtonAtivo) {
         const setInputValue = setInput.value
         setInput.style.display = "flex"
         setInput.style.opacity = "1"
 
-
+        //Adiciona ":" no set
+        setInput.addEventListener('input', (e) => {
+            let value = e.target.value.replace(/\D/g, '');
+            value = value.slice(0, 4);
+            if (value.length > 2) {
+                value = value.slice(0, 2) + ':' + value.slice(2);
+            }
+            e.target.value = value;
+        });
 
 
 

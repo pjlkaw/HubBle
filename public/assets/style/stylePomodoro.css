@@ -94,6 +94,7 @@ main .arc {
     border-radius: 50px;
     transition: all 500ms ease-in-out;
     max-width: 80%;
+    margin-bottom: 50px;
 }
 
 .timerDiv span {

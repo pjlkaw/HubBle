@@ -28,15 +28,24 @@ longButton.addEventListener('click', () => {
 
 startButton.addEventListener('click', () => {
     startButton.disabled = true;
+    let hours;
+    let minutes;
+    let seconds;
+
+    if (setButtonAtivo) {
+        let setInputValue = setInput.value
+        let [setHours, setMinutes] = setInputValue.split(':')        
+
+        timer = (Number(setHours) * 3600) + (Number(setMinutes)* 60);        
+    }
+
     if (timer > 0) {
         interval = setInterval(() => {
             timer--
     
-            let hours = String(Math.floor(timer/3600)).padStart(2, '0')
-            let minutes = String(Math.floor((timer % 3600) / 60)).padStart(2, '0')
-            let seconds = String(Math.floor( timer % 60)).padStart(2, '0')
-    
-            console.log(hours, minutes, seconds);
+            hours = String(Math.floor(timer/3600)).padStart(2, '0')
+            minutes = String(Math.floor((timer % 3600) / 60)).padStart(2, '0')
+            seconds = String(Math.floor( timer % 60)).padStart(2, '0')
             
             timerDisplay.innerHTML = `${hours}:${minutes}:${seconds}`
 
@@ -44,38 +53,9 @@ startButton.addEventListener('click', () => {
                 clearInterval(interval);
                 startButton.disabled = false;
             }
-
         }, 1000)
     }
-
-    clearInterval(interval)
-
-    if (setButtonAtivo) {
-        const setInputValue = setInput.value
-        const [hours, minutes] = setInputValue.split(':')         
-        console.log(hours, minutes);
-        
-        timer = (Number(hours) * 3600) + (Number(minutes) * 60);        
-        interval = setInterval(() => {
-            timer--
-            let displayHours = String(Math.floor(timer / 3600)).padStart(2, '0');
-
-            let displayMinutes = String(Math.floor((timer % 3600) / 60)).padStart(2, '0');
-
-            let displaySeconds = String(timer % 60).padStart(2, '0');
-
-            timerDisplay.innerHTML = `${displayHours}:${displayMinutes}:${displaySeconds}`
-
-            if (timer <= 0) {
-                clearInterval(interval);
-                startButton.disabled = false;
-            }
-
-        }, 1000)
-
-
-    }
-
+    
 
 })
 

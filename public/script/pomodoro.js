@@ -46,12 +46,15 @@ startButton.addEventListener('click', () => {
             hours = String(Math.floor(timer/3600)).padStart(2, '0')
             minutes = String(Math.floor((timer % 3600) / 60)).padStart(2, '0')
             seconds = String(Math.floor( timer % 60)).padStart(2, '0')
-            
+
             timerDisplay.innerHTML = `${hours}:${minutes}:${seconds}`
 
             if (timer <= 0) {
                 clearInterval(interval);
                 startButton.disabled = false;
+
+                setTimeout(() => {document.getElementById('alert').style.opacity = '1'}, 0)
+                setTimeout(() => {document.getElementById('alert').style.opacity = '0'}, 5000)
             }
         }, 1000)
     }

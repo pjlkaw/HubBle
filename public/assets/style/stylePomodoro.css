@@ -167,6 +167,6 @@ footer {
     font-size: 10px;
     background-color: var(--primary-color);
     color: var(--secundary-color);
-    position: fixed;
+    position: relative;
     bottom: 0px;
 }

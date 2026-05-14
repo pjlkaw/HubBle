@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="../assets/style/styleNotes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <link rel="stylesheet" href="../assets/style/styleNotes.css">
     <title>Huble - Pomodoro</title>
 </head>
 <body>
@@ -37,16 +36,23 @@
         </div>
 
         <div class="search">
-            <input type="text" placeholder="Seach">
-            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Search" style="display: none;">
             <i class="fa-solid fa-plus"></i>
+            <i onclick="searchBtnInput()" class="fa-solid fa-magnifying-glass"></i>
+            
         </div>
 
         
         <section class="workspace">
             <!-- Ideia consiste em uma area de trabalho onde pode Adicionar, organizar, arrastar, redimensionar e abrir notas -->
-            <div class="note note1">a</div>
-            <div class="note note2">b</div>
+            <div class="note note1">
+                <div class="noteHead">
+                    Nota 1
+                </div>
+                <div class="noteBody">
+                    <p>Conteúdo da nota 1a</p>
+                </div>
+            </div>
 
         </section>
 

@@ -1,0 +1,131 @@
+/* GERAL ========================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --primary-color: rgb(19, 19, 19);
+    --secundary-color: rgb(255, 255, 255);
+    --button-color: rgb(49, 49, 49);
+    --background-color: rgb(240, 240, 240);
+
+    --notes-yellow-color: rgb(255, 235, 125);
+    --tertiary-color: #ffcaca;
+
+    --text-color-black: rgb(19, 19, 19);
+    --text-color-white: rgb(255, 255, 255);
+
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* HEADER ========================= */
+
+header .headerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: var(--primary-color);
+    padding: 0px 15px;
+}
+
+header .headerContainer h1 {
+    color: white;
+}
+
+header .headerContainer h1 i {
+    color: var(--background-color);
+}
+
+header .headerContainer a {
+    text-decoration: none;
+    background-color: var(--button-color);
+    padding: 5px 15px;
+    border-radius: 15px;
+    font-size: 15px;
+    color: var(--text-color-white);
+}
+
+.divTheme {
+    background-color: var(--secundary-color);
+    color: var(--text-color-black);
+    border-radius: 30px;
+    padding: 0px 5px;
+}
+
+/* MAIN ========================= */
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--tertiary-color);
+    text-align: center;
+}
+
+.arc {
+    color: var(--notes-yellow-color);
+}
+
+.search input {
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+}
+.search i {
+    background-color: var(--primary-color);
+    color: var(--notes-yellow-color);
+    border-radius: 50%;
+}
+
+.workspace {
+    width: 100%;
+    height: 80vh;
+    position: relative;
+    overflow: hidden;
+    touch-action: none;
+}
+
+.note {
+    position: absolute;
+    background-color: var(--notes-yellow-color);
+    border-radius: 10px;
+    min-width: 100px;
+    max-width: 90%;
+    min-height: 100px;
+    max-height: 70%;
+    z-index: 1;
+    box-shadow: 0px 5px 10px;
+} .note1 {
+    width: 100px;
+    height: 100px;
+}
+
+
+/* FOOTER ========================= */
+
+footer {
+    background-color: var(--preto);
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    width: 100%;
+    gap: 10px;
+    padding: 10px;
+    font-size: 10px;
+    background-color: var(--primary-color);
+    color: var(--secundary-color);
+    position: fixed;
+    bottom: 0px;
+}

@@ -18,6 +18,10 @@ app.get('/pomodoro', (req, res) => {
   res.sendFile(path.join(__dirname, "../public/tools/pomodoro.html"))
 })
 
+app.get('/notes', (req, res) => {
+  res.sendFile(path.join(__dirname, "../public/tools/notes.html"))
+})
+
 app.listen(3000, (res, req) => {
     console.log("Rodando na porta 3000");
 })

@@ -1,4 +1,4 @@
-export function themeFunction(pomodoro = false) {
+export function themeFunction(pomodoro = false, notes = false) {
 
     const darkThemeBtn = document.getElementById('darkTheme')
     const whiteThemeBtn = document.getElementById('whiteTheme')
@@ -14,6 +14,11 @@ export function themeFunction(pomodoro = false) {
             document.documentElement.style.setProperty('--button-color', '#ffe5e5')
             document.documentElement.style.setProperty('--text-color-white', 'rgb(46, 46, 46)')
         }
+        if (notes === true) {
+            document.documentElement.style.setProperty('--tertiary-color', 'rgb(46, 46, 46)')
+            document.documentElement.style.setProperty('--button-color', '#ffe5e5')
+            document.documentElement.style.setProperty('--text-color-white', 'rgb(46, 46, 46)')
+        }
     })
 
     whiteThemeBtn.addEventListener('click', () => {
@@ -23,6 +28,11 @@ export function themeFunction(pomodoro = false) {
         document.documentElement.style.setProperty('--background-color', 'ffe5e5')
 
         if (pomodoro === true) {
+            document.documentElement.style.setProperty('--tertiary-color', '#ffe5e5')
+            document.documentElement.style.setProperty('--button-color', 'rgb(46, 46, 46)')
+            document.documentElement.style.setProperty('--text-color-white', '#ffe5e5')
+        }
+        if (notes === true) {
             document.documentElement.style.setProperty('--tertiary-color', '#ffe5e5')
             document.documentElement.style.setProperty('--button-color', 'rgb(46, 46, 46)')
             document.documentElement.style.setProperty('--text-color-white', '#ffe5e5')

@@ -1,5 +1,5 @@
 import { themeFunction } from '../functions/themeFunction.js'
-themeFunction(true) 
+themeFunction(true, false) 
 
 const shortButton = document.getElementById("shortID");
 const breakButton = document.getElementById("breakID");

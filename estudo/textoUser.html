@@ -63,9 +63,11 @@
 
     
     <script>
-        const noteText = document.getElementById('noteText')
+        const text = document.getElementById('noteText')
+        
         function edit() {
             // modal
+            document.getElementById('newText').value = text.textContent
             document.getElementById('modal').style.display = "flex"
         }
         
@@ -76,13 +78,10 @@
         function save() {
             const newText = document.getElementById('newText').value
 
-            noteText.innerHTML = newText
+            text.textContent = newText
 
             document.getElementById('modal').style.display = "none"   
         }
-
-
-
     </script>
 </body>
 </html>

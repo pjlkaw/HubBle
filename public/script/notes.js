@@ -1,7 +1,7 @@
 import { themeFunction } from '../functions/themeFunction.js'
 themeFunction(false, true) 
 
-let noteID = []
+let notes= []
 
 const workspaceSection = document.getElementById('workspace')
 function workspace() {
@@ -30,7 +30,7 @@ function addNote() {
         workspaceSection.appendChild(createNote) 
         
         // envia o ID da nota
-        noteID.push('note'+noteIndex)
+        notes.push('note'+noteIndex)
         console.log(noteID);
         
         // ao clique da nota criada
